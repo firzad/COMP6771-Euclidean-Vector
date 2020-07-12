@@ -13,6 +13,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+
+cxx_executable(
+	TARGET euclidean_vector_main
+	FILENAME euclidean_vector_main.cpp
+	LINK
+      euclidean_vector
+	   # range-v3
+)
+
 cxx_library(
    TARGET "euclidean_vector"
    FILENAME "euclidean_vector.cpp"
