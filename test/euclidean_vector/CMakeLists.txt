@@ -18,3 +18,18 @@ cxx_test(
    FILENAME "euclidean_vector_test4.cpp"
    LINK euclidean_vector fmt::fmt-header-only gsl::gsl-lite-v1
 )
+cxx_test(
+   TARGET euclidean_vector_test5
+   FILENAME "euclidean_vector_test5.cpp"
+   LINK euclidean_vector fmt::fmt-header-only gsl::gsl-lite-v1
+)
+cxx_test(
+   TARGET euclidean_vector_test6
+   FILENAME "euclidean_vector_test6.cpp"
+   LINK euclidean_vector fmt::fmt-header-only gsl::gsl-lite-v1
+)
+cxx_test(
+   TARGET euclidean_vector_test7
+   FILENAME "euclidean_vector_test7.cpp"
+   LINK euclidean_vector fmt::fmt-header-only gsl::gsl-lite-v1
+)

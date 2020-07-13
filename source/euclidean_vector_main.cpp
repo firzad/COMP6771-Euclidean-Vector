@@ -43,11 +43,11 @@ auto main() -> int {
 
 	std::cout << a.at(0) << "\n";
 
-	auto const i = comp6771::euclidean_vector{0, 0};
-	auto const j = comp6771::euclidean_vector{1, 2};
-	auto const k = comp6771::euclidean_vector{3, 4};
+	auto const i = comp6771::euclidean_vector{1, 2, 3};
+	// auto const j = comp6771::euclidean_vector{1, 2};
+	// auto const k = comp6771::euclidean_vector{3, 4};
 	std::cout << comp6771::euclidean_norm(i) << "\n";
-	std::cout << comp6771::dot(j, k) << "\n";
+	// std::cout << comp6771::dot(j, k) << "\n";
 	std::cout << comp6771::unit(i) << "\n";
 
 	return 1;
