@@ -67,7 +67,7 @@ TEST_CASE("Operators") {
 
 		CHECK(zero_vec.dimensions() == test_vec.dimensions());
 		auto const test_vec2 = test_vec + zero_vec;
-		CHECK(zero_vec == test_vec2);
+		CHECK(test_vec == test_vec2);
 	}
 
 	SECTION("Subtraction -") {
@@ -83,7 +83,7 @@ TEST_CASE("Operators") {
 		CHECK(test_vec == vec1 - vec2);
 
 		CHECK(zero_vec.dimensions() == test_vec.dimensions());
-		auto const test_vec2 = test_vec + zero_vec;
+		auto const test_vec2 = test_vec - zero_vec;
 		CHECK(test_vec2 == test_vec);
 		auto const test_vec3 = zero_vec - test_vec;
 		CHECK(test_vec3 == -test_vec);
@@ -122,11 +122,11 @@ TEST_CASE("Operators") {
 		// a = b / #
 		auto const result1 = vec1 / scalar;
 		CHECK(result1.dimensions() == vec1.dimensions());
-		CHECK(result1[0] == vec1[0] / scalar);
-		CHECK(result1[1] == vec1[1] / scalar);
-		CHECK(result1[2] == vec1[2] / scalar);
-		CHECK(result1[3] == vec1[3] / scalar);
-		CHECK(result1[4] == vec1[4] / scalar);
+		CHECK(result1[0] == Approx(vec1[0] / scalar));
+		CHECK(result1[1] == Approx(vec1[1] / scalar));
+		CHECK(result1[2] == Approx(vec1[2] / scalar));
+		CHECK(result1[3] == Approx(vec1[3] / scalar));
+		CHECK(result1[4] == Approx(vec1[4] / scalar));
 	}
 
 	SECTION("Output Stream <<") {
